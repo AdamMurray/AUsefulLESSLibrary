@@ -1,9 +1,16 @@
 # A Useful LESS Library
 
-A library of mixins for use in projects using LESS.
+A library of mixins and classes for use in projects using LESS
+
+## Installation
+You can install this package with `bower`
+
+### bower
+`bower install a-useful-less-library`
 
 ## Documentation
-The source code, contained in the `src` directory, is heavily commented.
+The source code, contained in the [`src/`](https://github.com/AdamMurray/AUsefulLESSLibrary/tree/master/src)
+directory, is heavily commented
 
 ## License
 The MIT License (MIT)

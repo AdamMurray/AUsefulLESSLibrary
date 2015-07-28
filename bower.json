@@ -1,5 +1,5 @@
 {
-  "name": "adam-murray-less-mixin-library",
+  "name": "a-useful-less-library",
   "version": "1.0.0",
   "main": [
     "library.less"
@@ -8,7 +8,7 @@
   "authors": [
     "Adam Murray <adam.john.campbell.murray@gmail.com>"
   ],
-  "description": "Adam Murray's LESS mixin library",
+  "description": "A library of mixins and classes for use in projects using LESS",
   "license": "MIT",
   "keywords": [
     "less",
