@@ -1,0 +1,32 @@
+
+// _media-queries.less
+
+/**
+ * Apply styles to an element above a certain screen size
+ *
+ * Example usage:
+ *
+ *   .aboveBreakpoint(900px, {
+ *     background-color: #ff0000;
+ *   });
+ */
+.aboveBreakpoint(@size, @rules) {
+  @media screen and (min-width: @size) {
+    @rules();
+  }
+}
+
+/*
+ * Apply styles to an element below a certain screen size
+ *
+ * Example usage:
+ *
+ *   .aboveBreakpoint(900px, {
+ *     background-color: #00ff00;
+ *   });
+ */
+.belowBreakpoint(@size, @rules) {
+  @media screen and (max-width: @size) {
+    @rules();
+  }
+}
