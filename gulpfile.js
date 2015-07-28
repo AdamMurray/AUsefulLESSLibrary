@@ -3,12 +3,13 @@
 
 // Base setup
 var gulp    = require('gulp'),
+    less    = require('gulp-less'),
     concat  = require('gulp-concat');
 
 // Folders
-var src = './src/';
+var src = 'src/';
 
-// Compile and concatenate .less files
+// Concatenate .less files
 gulp.task('less', function() {
   return gulp.src([
             src + '*.less'
@@ -17,13 +18,23 @@ gulp.task('less', function() {
     .pipe(gulp.dest(''));
 });
 
+// Compile and concatenate .less files
+gulp.task('less-to-css', function() {
+  return gulp.src([
+            src + '*.less'
+          ])
+    .pipe(less())
+    .pipe(concat('library.css'))
+    .pipe(gulp.dest(''));
+});
+
 // Set up watcher
 gulp.task('watch', function() {
 
   // Watch .less files
-  gulp.watch(src + '*.less', ['less']);
+  gulp.watch(src + '*.less', ['less', 'less-to-css']);
 
 });
 
 // Default task
-gulp.task('default', ['less', 'watch']);
+gulp.task('default', ['less', 'less-to-css', 'watch']);

@@ -1,0 +1,188 @@
+/*
+ * A collection of mixins using the 'animation' properties
+ */
+/*
+ * animation-duration mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-duration(1s);
+ */
+/*
+ * animation-iteration-count mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-iteration-count(infinite);
+ */
+/*
+ * animation-name mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-name(spin);
+ */
+/*
+ * animation-timing-function mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-timing-function(linear);
+ */
+
+/*
+ * A collection of mixins using the 'border' properties
+ */
+/**
+* border-radius mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .border-radius(10px);
+*/
+
+/*
+ * A collection of mixins using the 'box-sizing' properties
+ */
+/**
+* box-sizing mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .box-sizing(border-box);
+*/
+
+/**
+ * Clear fix mixin for use with floats
+ *
+ * Example usage:
+ *
+ *   .clearfix;
+ */
+
+/*
+ * A collection of headings mixins
+ */
+/**
+* Generic heading mixin
+*
+* Example usage:
+*
+*   .heading(30px, #fff, #000, left, 20px 0);
+*/
+/**
+* h1 mixin
+*
+* Example usage:
+*
+*   .h1(30px, #fff, #000, left, 20px 0);
+*/
+/**
+* h2 mixin
+*
+* Example usage:
+*
+*   .h2(30px, #fff, #000, left, 20px 0);
+*/
+/**
+* h3 mixin
+*
+* Example usage:
+*
+*   .h3(30px, #fff, #000, left, 20px 0);
+*/
+/**
+* h4 mixin
+*
+* Example usage:
+*
+*   .h4(30px, #fff, #000, left, 20px 0);
+*/
+
+/**
+ * Keyframe mixin based on 'transform' proptery with only 'from' and 'to' set
+ *
+ * Example usage:
+ *
+ *   .keyframes-from-to-transform(spin, rotate(0deg), rotate(360deg));
+ */
+/**
+ * Keyframe mixin based on 'transform' proptery with '0%', '50%', and '100%' set
+ *
+ * Example usage:
+ *
+ *   .keyframes-0-50-100-transform(spin, scale(1), scale(1.4), scale(1));
+ */
+
+/**
+ * Apply styles to an element above a certain screen size
+ *
+ * Example usage:
+ *
+ *   .aboveBreakpoint(900px, {
+ *     background-color: #ff0000;
+ *   });
+ */
+/**
+ * Apply styles to an element below a certain screen size
+ *
+ * Example usage:
+ *
+ *   .aboveBreakpoint(900px, {
+ *     background-color: #00ff00;
+ *   });
+ */
+
+/*
+* A collection of text area mixins
+*/
+/**
+* padded text area mixin
+*
+* Example usage:
+*
+*   .translateY(50%);
+*/
+
+/*
+ * A collection of mixins using the 'transform' properties
+ */
+/**
+* transform: rotate() mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .rotate(90deg);
+*/
+/**
+ * transform: translateY() mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .translateY(50%);
+ */
+
+/*
+ * A collection of mixins using the 'transition' properties
+ */
+/**
+ * transition mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition(top, 1s, ease);
+ */
+/**
+ * transition-delay mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition-delay(1s);
+ */
+/**
+ * transition-duration mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition-duration(.4s);
+ */

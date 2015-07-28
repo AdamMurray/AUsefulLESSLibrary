@@ -13,11 +13,13 @@
   "keywords": [
     "less",
     "css",
-    "mixins"
+    "mixins",
+    "library"
   ],
   "ignore": [
     "node_modules",
     "*.js",
+    "*.css",
     "package.json",
     ".gitignore"
   ]

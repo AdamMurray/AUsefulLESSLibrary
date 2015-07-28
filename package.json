@@ -23,6 +23,7 @@
   "homepage": "https://github.com/AdamMurray/AUsefulLESSLibrary",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0"
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.3"
   }
 }
