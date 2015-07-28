@@ -1,0 +1,24 @@
+{
+  "name": "adam-murray-less-mixin-library",
+  "version": "1.0.0",
+  "main": [
+    "library.less"
+  ],
+  "homepage": "https://github.com/AdamMurray/AUsefulLESSLibrary",
+  "authors": [
+    "Adam Murray <adam.john.campbell.murray@gmail.com>"
+  ],
+  "description": "Adam Murray's LESS mixin library",
+  "license": "MIT",
+  "keywords": [
+    "less",
+    "css",
+    "mixins"
+  ],
+  "ignore": [
+    "node_modules",
+    "*.js",
+    "package.json",
+    ".gitignore"
+  ]
+}

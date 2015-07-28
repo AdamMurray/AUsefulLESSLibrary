@@ -1,0 +1,427 @@
+
+// _animation.less
+
+/*
+ * A collection of mixins using the 'animation' properties
+ */
+
+/**
+ * animation-duration mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-duration(1s);
+ */
+.animation-duration(@time) {
+  -moz-animation-duration: @time;
+  -ms-animation-duration: @time;
+  -webkit-animation-duration: @time;
+  animation-duration: @time;
+}
+
+/**
+ * animation-iteration-count mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-iteration-count(infinite);
+ */
+.animation-iteration-count(@type) {
+  -moz-animation-iteration-count: @type;
+  -ms-animation-iteration-count: @type;
+  -webkit-animation-iteration-count: @type;
+  animation-iteration-count: @type;
+}
+
+/**
+ * animation-name mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-name(spin);
+ */
+.animation-name(@name) {
+  -moz-animation-name: @name;
+  -ms-animation-name: @name;
+  -webkit-animation-name: @name;
+  animation-name: @name;
+}
+
+/**
+ * animation-timing-function mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-timing-function(linear);
+ */
+.animation-timing-function(@type) {
+  -moz-animation-timing-function: @type;
+  -ms-animation-timing-function: @type;
+  -webkit-animation-timing-function: @type;
+  animation-timing-function: @type;
+}
+
+
+// _border.less
+
+/*
+ * A collection of mixins using the 'border' properties
+ */
+
+/**
+* border-radius mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .border-radius(10px);
+*/
+.border-radius(@radius) {
+ -moz-border-radius: @radius;
+ -webkit-border-radius: @radius;
+ border-radius: @radius;
+}
+
+
+// _box-sizing.less
+
+/*
+ * A collection of mixins using the 'box-sizing' properties
+ */
+
+/**
+* box-sizing mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .box-sizing(border-box);
+*/
+.box-sizing(@type: border-box) {
+  -moz-box-sizing: @type;
+  -webkit-box-sizing: @type;
+  box-sizing: @type;
+}
+
+
+// _clearfix.less
+
+/**
+ * Clear fix mixin for use with floats
+ *
+ * Example usage:
+ *
+ *   .clearfix;
+ */
+.clearfix() {
+  zoom:1;
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+// _headings.less
+
+/*
+ * A collection of headings mixins
+ */
+
+/**
+* Generic heading mixin
+*
+* Example usage:
+*
+*   .heading(30px, #fff, #000, left, 20px 0);
+*/
+.heading(@fontSize, @color, @background, @textAlign, @padding) {
+ font-size: @fontSize;
+ padding: @padding;
+ color: @color;
+ background: @background;
+ text-align: @textAlign;
+}
+
+/**
+* h1 mixin
+*
+* Example usage:
+*
+*   .h1(30px, #fff, #000, left, 20px 0);
+*/
+.h1(@fontSize: 40px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+/**
+* h2 mixin
+*
+* Example usage:
+*
+*   .h2(30px, #fff, #000, left, 20px 0);
+*/
+.h2(@fontSize: 30px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+/**
+* h3 mixin
+*
+* Example usage:
+*
+*   .h3(30px, #fff, #000, left, 20px 0);
+*/
+.h3(@fontSize: 20px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+
+/**
+* h4 mixin
+*
+* Example usage:
+*
+*   .h4(30px, #fff, #000, left, 20px 0);
+*/
+.h4(@fontSize: 14px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+
+// _keyframes.less
+
+/**
+ * Keyframe mixin based on 'transform' proptery with only 'from' and 'to' set
+ *
+ * Example usage:
+ *
+ *   .keyframes-from-to-transform(spin, rotate(0deg), rotate(360deg));
+ */
+.keyframes-from-to-transform(@name, @from, @to) {
+  @-moz-keyframes @name {
+    from {
+      -moz-transform: @from;
+    }
+    to {
+      -moz-transform: @to;
+    }
+  }
+  @-webkit-keyframes @name {
+    from {
+      -webkit-transform: @from;
+    }
+    to {
+      -webkit-transform: @to;
+    }
+  }
+  @keyframes @name {
+    from {
+      transform: @from;
+    }
+    to {
+      transform: @to;
+    }
+  }
+}
+
+/**
+ * Keyframe mixin based on 'transform' proptery with '0%', '50%', and '100%' set
+ *
+ * Example usage:
+ *
+ *   .keyframes-0-50-100-transform(spin, scale(1), scale(1.4), scale(1));
+ */
+.keyframes-0-50-100-transform(@name, @0, @50, @100) {
+  @-moz-keyframes @name {
+    0% {
+      -moz-transform: @0;
+    }
+    50% {
+      -moz-transform: @50;
+    }
+    100% {
+      -moz-transform: @100;
+    }
+  }
+  @-webkit-keyframes @name {
+    0% {
+      -webkit-transform: @0;
+    }
+    50% {
+      -webkit-transform: @50;
+    }
+    100% {
+      -webkit-transform: @100;
+    }
+  }
+  @keyframes @name {
+    0% {
+      transform: @0;
+    }
+    50% {
+      transform: @50;
+    }
+    100% {
+      transform: @100;
+    }
+  }
+}
+
+
+// _media-queries.less
+
+/**
+ * Apply styles to an element above a certain screen size
+ *
+ * Example usage:
+ *
+ *   .aboveBreakpoint(900px, {
+ *     background-color: #ff0000;
+ *   });
+ */
+.aboveBreakpoint(@size, @rules) {
+  @media screen and (min-width: @size) {
+    @rules();
+  }
+}
+
+/**
+ * Apply styles to an element below a certain screen size
+ *
+ * Example usage:
+ *
+ *   .aboveBreakpoint(900px, {
+ *     background-color: #00ff00;
+ *   });
+ */
+.belowBreakpoint(@size, @rules) {
+  @media screen and (max-width: @size) {
+    @rules();
+  }
+}
+
+
+// _text-areas.less
+
+/*
+* A collection of text area mixins
+*/
+
+/**
+* padded text area mixin
+*
+* Example usage:
+*
+*   .translateY(50%);
+*/
+.padded-text-area(@fontFamily, @fontSize, @lineHeight, @padding,
+                  @wordSpacing, @borderBottom, @borderTop, @color,
+                  @backgroundColor) {
+  font-family: @fontFamily;
+  line-height: @lineHeight;
+  padding: @padding;
+  border-top: @borderTop;
+  border-bottom: @borderBottom;
+  font-size: @fontSize;
+  word-spacing: @wordSpacing;
+  text-align: @textAlign;
+  color: @color;
+  background-color: @backgroundColor;
+
+  -ms-word-break: break-all;
+  word-break: break-all;
+
+  /* Non standard for webkit */
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+
+// _transform.less
+
+/*
+ * A collection of mixins using the 'transform' properties
+ */
+
+/**
+* transform: rotate() mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .rotate(90deg);
+*/
+.rotate(@degrees) {
+  -ms-transform: rotate(@degrees);
+  -webkit-transform: rotate(@degrees);
+  transform: rotate(@degrees);
+}
+
+/**
+ * transform: translateY() mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .translateY(50%);
+ */
+.translateY(@translation) {
+  -moz-transform: translateY(@translation);
+  -ms-transform: translateY(@translation);
+  -o-transform: translateY(@translation);
+  -webkit-transform: translateY(@translation);
+  transform: translateY(@translation);
+}
+
+
+// _transition.less
+
+/*
+ * A collection of mixins using the 'transition' properties
+ */
+
+/**
+ * transition mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition(top, 1s, ease);
+ */
+.transition(@type, @time, @curve) {
+  -o-transition: @type @time @curve;
+  -moz-transition: @type @time @curve;
+  -webkit-transition: @type @time @curve;
+  transition: @type @time @curve;
+}
+
+/**
+ * transition-delay mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition-delay(1s);
+ */
+.transition-delay(@time) {
+  -webkit-transition-delay: @time;
+  transition-delay: @time;
+}
+
+/**
+ * transition-duration mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition-duration(.4s);
+ */
+.transition-duration(@time) {
+  -moz-transition-duration: @time;
+  -o-transition-duration: @time;
+  -webkit-transition-duration: @time;
+  transition-duration: @time;
+}
