@@ -1,0 +1,19 @@
+
+// _box-sizing.less
+
+/*
+ * A collection of mixins using the 'box-sizing' properties
+ */
+
+/**
+* box-sizing mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .box-sizing(border-box);
+*/
+.box-sizing(@type: border-box) {
+  -moz-box-sizing: @type;
+  -webkit-box-sizing: @type;
+  box-sizing: @type;
+}

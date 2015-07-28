@@ -1,0 +1,46 @@
+
+// _transition.less
+
+/*
+ * A collection of mixins using the 'transition' properties
+ */
+
+/**
+ * transition mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition(top, 1s, ease);
+ */
+.transition(@type, @time, @curve) {
+  -o-transition: @type @time @curve;
+  -moz-transition: @type @time @curve;
+  -webkit-transition: @type @time @curve;
+  transition: @type @time @curve;
+}
+
+/**
+ * transition-delay mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition-delay(1s);
+ */
+.transition-delay(@time) {
+  -webkit-transition-delay: @time;
+  transition-delay: @time;
+}
+
+/**
+ * transition-duration mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .transition-duration(.4s);
+ */
+.transition-duration(@time) {
+  -moz-transition-duration: @time;
+  -o-transition-duration: @time;
+  -webkit-transition-duration: @time;
+  transition-duration: @time;
+}

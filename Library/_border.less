@@ -1,0 +1,19 @@
+
+// _border.less
+
+/*
+ * A collection of mixins using the 'border' properties
+ */
+
+/**
+* border-radius mixin including vendor prefixed properties
+*
+* Example usage:
+*
+*   .border-radius(10px);
+*/
+.border-radius(@radius) {
+ -moz-border-radius: @radius;
+ -webkit-border-radius: @radius;
+ border-radius: @radius;
+}

@@ -1,0 +1,66 @@
+
+// _headings.less
+
+/*
+ * A collection of headings mixins
+ */
+
+/**
+* Generic heading mixin
+*
+* Example usage:
+*
+*   .heading(30px, #fff, #000, left, 20px 0);
+*/
+.heading(@fontSize, @color, @background, @textAlign, @padding) {
+ font-size: @fontSize;
+ padding: @padding;
+ color: @color;
+ background: @background;
+ text-align: @textAlign;
+}
+
+/**
+* h1 mixin
+*
+* Example usage:
+*
+*   .h1(30px, #fff, #000, left, 20px 0);
+*/
+.h1(@fontSize: 40px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+/**
+* h2 mixin
+*
+* Example usage:
+*
+*   .h2(30px, #fff, #000, left, 20px 0);
+*/
+.h2(@fontSize: 30px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+/**
+* h3 mixin
+*
+* Example usage:
+*
+*   .h3(30px, #fff, #000, left, 20px 0);
+*/
+.h3(@fontSize: 20px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
+
+
+/**
+* h4 mixin
+*
+* Example usage:
+*
+*   .h4(30px, #fff, #000, left, 20px 0);
+*/
+.h4(@fontSize: 14px, @color: #222, @background: none, @textAlign: left, @padding: 20px 0) {
+  .heading(@fontSize, @color, @background, @textAlign, @padding);
+}
