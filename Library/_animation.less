@@ -1,6 +1,13 @@
 
 // _animation.less
 
+/*
+ * animation-duration mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-duration(1s);
+ */
 .animation-duration(@time) {
   -moz-animation-duration: @time;
   -ms-animation-duration: @time;
@@ -8,6 +15,13 @@
   animation-duration: @time;
 }
 
+/*
+ * animation-iteration-count mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-iteration-count(infinite);
+ */
 .animation-iteration-count(@type) {
   -moz-animation-iteration-count: @type;
   -ms-animation-iteration-count: @type;
@@ -15,6 +29,13 @@
   animation-iteration-count: @type;
 }
 
+/*
+ * animation-name mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-name(spin);
+ */
 .animation-name(@name) {
   -moz-animation-name: @name;
   -ms-animation-name: @name;
@@ -22,6 +43,13 @@
   animation-name: @name;
 }
 
+/*
+ * animation-timing-function mixin including vendor prefixed properties
+ *
+ * Example usage:
+ *
+ *   .animation-timing-function(linear);
+ */
 .animation-timing-function(@type) {
   -moz-animation-timing-function: @type;
   -ms-animation-timing-function: @type;
